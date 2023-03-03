@@ -1,22 +1,27 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react';
 import '../styles/App.css';
 
 const App = () => {
 //code here 
-const [h1, seth1]=useState("redColor")
-function myfunc(){
-  if(hi==="redColor"){
-    seth1("blueColor")
+
+const [color, setColor] = useState("redColor");
+
+const HandleStyle = () => {
+  if(color === "redColor"){
+    setColor("blueColor");
   }else{
-    seth1("redColor")
+    setColor("redColor");
+
   }
-  return(
-    <div id="main">
-      <p className={h1}> Newton School</p>
-      <button id='button' onClick={myfunc}>Change Style</button>
-    </div>
-  )
+
 }
+
+  return(
+    <>
+    <p className={color} >Newton School</p>
+    <button id='button' onClick={HandleStyle} >Change Style</button>
+  </>
+  )
 }
 
 
