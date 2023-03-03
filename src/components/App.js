@@ -3,12 +3,20 @@ import '../styles/App.css';
 
 const App = () => {
 //code here 
-  return (
+const [h1, seth1]=useState("redColor")
+function myfunc(){
+  if(hi==="redColor"){
+    seth1("blueColor")
+  }else{
+    seth1("redColor")
+  }
+  return(
     <div id="main">
-      <p className={} >Newton School</p>
-      <button id='button' onClick={}>Change Style</button>
+      <p className={h1}> Newton School</p>
+      <button id='button' onClick={myfunc}>Change Style</button>
     </div>
   )
+}
 }
 
 
